@@ -1,1 +1,1 @@
-This is my devops project.
+This script print current working directory.
