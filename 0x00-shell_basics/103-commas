@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -avxpm  \n
+ls -aXvmp -q
