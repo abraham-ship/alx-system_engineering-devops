@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying contents of file after first dash
+
+for file in *; do
+    if [[ -f $file && ! $file =~ ^\. ]]; then
+        filename="${file#*-}"
+        echo "$filename"
+    fi
+done
