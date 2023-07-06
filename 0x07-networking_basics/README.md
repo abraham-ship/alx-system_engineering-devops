@@ -9,6 +9,23 @@
 * The first line of all your Bash scripts should be exactly #!/usr/bin/env bash<br>
 * The second line of all your Bash scripts should be a comment explaining what is the script doing<br>
 
+## MOre info
+The second line of all your Bash scripts should be a comment explaining what is the script doing<br>
+
+For multiple choice question type tasks, just type the number of the correct answer in your answer file, add a new line for every new answer, example:<br>
+
+What is the most important position in a software company?<br>
+
+1.	Project manager<br>
+2.	Backend developer<br>
+3.	System administrator<br>
+
+```bash
+sylvain@ubuntu$ cat foo_answer_file
+3
+sylvain@ubuntu$
+```
+
 ## Task 0.
 Questions:<br>
 
