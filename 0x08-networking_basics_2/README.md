@@ -52,7 +52,7 @@ rtt min/avg/max/mdev = 8.065/8.065/8.065/0.000 ms
 ```
 
 
-##Task 1.
+## Task 1.
 Write a Bash script that displays all active IPv4 IPs on the machine it’s executed on.<br>
 Example:<br>
 ```bash
