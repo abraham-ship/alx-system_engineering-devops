@@ -21,9 +21,11 @@ The monitoring tool collects data in various forms like logs, metrics and events
 Use of tools including cloud-based solutions like Microsoft Azure Monitor as well as open source tools like Nagios, which provide a detailed information about the web server metric QPS(Queries-per-second) to help make sure that the web infrastructure is able to handle changing amounts of web traffic.
 
 Issues with the 3 web server infrastructure:
-a.
+a. Why terminating SSL at the load balancer level is an issue:
+This means that the traffic between the load-balancer and the server is unencrypted and thus vulnerable to data theft and session hijacking, and this defeats the purpose of the SSL certificate as encryption is lost mid-process.
 
+b. Why having only one MySQL server capable of accepting writes is an issue:
+This could create a bottleneck in the system as when all write requests get directed to a single server, it can become overwhelmed and slow down the entire infrastructure.
 
-
-
-
+c. Why having servers with all the same components (database, web server and application server) might be a problem:
+First,there are security concerns as this will increase the risk of security breaches whereby if an attacker gains access to one component, they are able to access all other components present on the same server and secondly this might affect the performance since each component has its own resource requirements, so this leads to resource contention and reduced web infrastructure performance.
