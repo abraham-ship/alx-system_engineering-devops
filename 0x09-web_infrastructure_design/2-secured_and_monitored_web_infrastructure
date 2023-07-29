@@ -1,0 +1,29 @@
+1. For every additional element, why you are adding it:
+a. 3 firewalls:
+The three firewalls are added with one firewall for each server, the reason for adding is that a firewall allows non-threatening traffic in and keeps the dangerous traffic out, thus providing protection against malicious or unnecessary network traffic.
+
+b. 1 SSL certificate to serve www.foobar.com over HTTPS:
+The SSL certificate is added to enable securing of an internet connection by encrypting data sent between the www.foobar.com and a browser(or between two or more servers). This prevents hackers from seeing or stealing any information.
+
+c.3 monitoring clients (data collector for Sumologic or other monitoring services):
+The reason for adding the monitoring clients is to monitor the performance of the infrastructure and ensure that the entire infrastructure is working correctly as this is critical to ensuring all users are happy and dont run into errors when accessing the website.
+
+2. What are firewalls for:
+To ensure the network is secured from cyberattacks as it allows non-threatening traffic in and keeps the dangerous traffic out.
+
+3. What monitoring is used for:
+Enable monitoring the performance of the infrastructure and ensure that the entire infrastructure is working correctly at all times to ensure high availability and a good experience for the users.
+
+4. How the monitoring tool is collecting data:
+The monitoring tool collects data in various forms like logs, metrics and events using its OpenTelemetry collector and integrations with cloud providers to provide complete web infrastructure monitoring.
+
+5. Explain what to do if you want to monitor your web server QPS:
+Use of tools including cloud-based solutions like Microsoft Azure Monitor as well as open source tools like Nagios, which provide a detailed information about the web server metric QPS(Queries-per-second) to help make sure that the web infrastructure is able to handle changing amounts of web traffic.
+
+Issues with the 3 web server infrastructure:
+a.
+
+
+
+
+
