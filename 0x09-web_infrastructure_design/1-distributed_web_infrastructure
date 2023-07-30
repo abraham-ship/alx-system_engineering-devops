@@ -1,3 +1,7 @@
+Whiteboard of the three server web infrastructure that hosts the website www.foobar.com (link)
+https://imgur.com/a/HoGEpRA
+
+
 For every additional element, why you are adding it
 2 servers:
 Two additional servers are added to enable handling of more incoming traffic (HTTP requests and responses) as one server wont be able to handle all the requests without affecting the users' experience.
