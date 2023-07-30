@@ -7,14 +7,14 @@ For every additional element, why you are adding it
 Two additional servers are added to enable handling of more incoming traffic (HTTP requests and responses) as one server wont be able to handle all the requests without affecting the users' experience.
 
 1 load-balancer(HA Proxy):
-The load balancer(software or hardware) is added to be able to redirect traffic to the respective servers to avoid overburdening of one server while others stay idle and also in the case one server stops working it helps achieve failover to the other servers to lessen negative impact on users
+The load balancer(software or hardware) is added to be able to redirect traffic to the respective servers to avoid overburdening of one server while others stay idle and also in the case where one server stops working it helps achieve failover to the other servers to lessen negative impact on users.
 
 
 What distribution algorithm your load balancer is configured with and how it works?
 Our load balancer is configured with the Round Robin Load balancing algorithm, where clients requests are distributed to servers in a simple rotation, like in our case we have three servers, the first request is sent to the first server, the second request to the second server and the third request to the third server and the rotation continues.
 
 Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both?
-The load-balancer is enabling an Active-Active setup
+The load-balancer is enabling an Active-Active setup.
 The difference is that for the Active-active setup, all servers are working concurrently ensuring improved scalability and providing high availability whereas for the Active-Passive setup, there is a server that is active that handles the requests and another server is on standby and in the case of a server failure the malfunctioned one is turned off completely and the other one takes over thus switching roles.
 
 How a database Primary-Replica (Master-Slave) cluster works?
@@ -24,8 +24,7 @@ It starts with the master logging the updates, which then ripple through to the 
 
 What is the difference between the Primary node and the Replica node in regard to the application?
 
-In our case the primary node refers to the Master whereas the replica node refers to the slave.
-
+In our case the primary node refers to the Master whereas the replica node refers to the slave. The Master has read and write capabilities but the slave has only read capability.
 
 
 Issues with this infrastructure

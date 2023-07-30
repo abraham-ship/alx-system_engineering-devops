@@ -1,0 +1,9 @@
+https://imgur.com/a/eShnheb
+
+For every additional element, why you are adding it:
+
+1 server - Since we are upscaling our infrastructure, we added one server to handle the increasing traffic that is coming from the client(user) to enhance the user experience.
+
+1 load-balancer (HAproxy) configured as cluster with the other one - We added the extra load-balancer for it to failover when the other load-balancer fails(malfunctions)
+
+Split components (web server, application server, database) with their own server - We have splitted the components for it to alleviate security concerns arising when all of them are clustered together as one server. All of them being in one server will open a wide door for the attacker to access all of the server if they have access to one of the components. In addition to that, since each component requires it's own resources, splitting them alleviates the contention of resources that comes about when they are in one server.
