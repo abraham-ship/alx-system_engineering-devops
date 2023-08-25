@@ -7,14 +7,14 @@ The three firewalls are added with one firewall for each server, the reason for 
 b. 1 SSL certificate to serve www.foobar.com over HTTPS:
 The SSL certificate is added to enable securing of an internet connection by encrypting data sent between the www.foobar.com and a browser(or between two or more servers). This prevents hackers from seeing or stealing any information.
 
-c.3 monitoring clients (data collector for Sumologic or other monitoring services):
+c. 3 monitoring clients (data collector for Sumologic or other monitoring services):
 The reason for adding the monitoring clients is to monitor the performance of the infrastructure and ensure that the entire infrastructure is working correctly as this is critical to ensuring all users are happy and dont run into errors when accessing the website.
 
 2. What are firewalls for:
 To ensure the network is secured from cyberattacks as it allows non-threatening traffic in and keeps the dangerous traffic out.
 
 3. What monitoring is used for:
-Enable monitoring the performance of the infrastructure and ensure that the entire infrastructure is working correctly at all times to ensure high availability and a good experience for the users.
+Enables monitoring the performance of the infrastructure and ensure that the entire infrastructure is working correctly at all times to ensure high availability and a good experience for the users.
 
 4. How the monitoring tool is collecting data:
 The monitoring tool collects data in various forms like logs, metrics and events using its OpenTelemetry collector and integrations with cloud providers to provide complete web infrastructure monitoring.
@@ -30,4 +30,4 @@ b. Why having only one MySQL server capable of accepting writes is an issue:
 This could create a bottleneck in the system as when all write requests get directed to a single server, it can become overwhelmed and slow down the entire infrastructure.
 
 c. Why having servers with all the same components (database, web server and application server) might be a problem:
-First,there are security concerns as this will increase the risk of security breaches whereby if an attacker gains access to one component, they are able to access all other components present on the same server and secondly this might affect the performance since each component has its own resource requirements, so this leads to resource contention and reduced web infrastructure performance.
+First, there are security concerns as this will increase the risk of security breaches whereby if an attacker gains access to one component, they are able to access all other components present on the same server and secondly this might affect the performance since each component has its own resource requirements, so this leads to resource contention and reduced web infrastructure performance.

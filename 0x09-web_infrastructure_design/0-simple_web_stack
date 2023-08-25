@@ -1,2 +1,33 @@
 https://imgur.com/a/bBIGKnq
-https://docs.google.com/document/d/1Q1-ChZdk-wAinZkTKRkLgJU6Nde4ZcXD4ZhwUVOvUiI/edit
+
+What is a server:
+A server is a physical or virtual device that runs an OS such as debian that is usually located in data centers.
+
+What is the role of the domain name:
+The domain name serves the function of identifying internet resources such as computers, networks and services.
+
+What type of DNS www is in www.foobar.com :
+The dns record found in www.foobar.com is A record because it points to an IP.
+
+What is the role of the web server:
+The web server is a piece of software that delivers web pages.
+
+What is the role of the application server:
+The role of the application server is to store and process dynamic application requests.
+
+What is the role of the database:
+The database serves as storage for information or data.
+
+What is the server using to communicate with the computer of the user requesting the website:
+The server communicates with the user’s computer via TCP/IP via HTTP/HTTPS.
+
+You must be able to explain what the issues are with this infrastructure:
+Issues with the one server web infrastructure 
+
+1. SPOF(Single point of failure): 
+SPOF refers to any non-redundant part of a system that, if dysfunctional, would cause the entire system to fail. There's a single point of failure in this architecture caused by the lack of redundancy and any single failure in any part of the system will cause all the system to stop.
+ 2. Downtime when maintenance needed (like deploying new code web server needs to be restarted): 
+In case a web server is restarted when new code is deployed it will lead to the website being temporarily unavailable. 
+3. Cannot scale if too much incoming traffic:
+ This architecture cannot scale because it lacks the ability to handle a huge number of requests since it has no other server to redirect the traffic to.
+
