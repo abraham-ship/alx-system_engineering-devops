@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# To install nginx that listens on port 80
+# and returns Hello World! upon query to root
+
+apt-get update
+apt-get install -y nginx
+
+echo "Hello World!" > /var/www/html/index.html
+
+service nginx restart
