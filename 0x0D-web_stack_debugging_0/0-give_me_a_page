@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # fixing server
 
+apt-get -y update
+apt-get -y install apache2
+
 service apache2 restart
