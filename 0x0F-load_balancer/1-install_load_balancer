@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.8 -y
 sudo apt-get install haproxy=2.8.\* -y
 
 
-echo "ENABLED=1" | sudo tee /etc/default/haproxy
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
 
 echo "
@@ -20,7 +20,8 @@ backend web_backend
 	mode http
 	balance roundrobin
 	server web-01 35.227.45.0:80 check
-	server web-02 35.237.153.115:80 check" >> /etc/haproxy/haproxy.cfg
+	server web-02 35.237.153.115:80 check" |
+		sudo tee -a /etc/haproxy/haproxy.cfg
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
