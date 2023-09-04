@@ -16,5 +16,5 @@ echo "backend web_backend
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
-sudo systemctl start haproxy
+sudo systemctl restart haproxy
 sudo systemctl enable haproxy
