@@ -9,6 +9,11 @@ echo "backend web_backend
     server web-01 242145-web-01:80 check
     server web-02 242145-web-02:80 check" | sudo tee /etc/haproxy/haproxy.cfg
 
+echo "frontend http
+    bind *:80
+    mode http
+    default_backend web-backend" | sudo tee /etc/haproxy/haproxy.cfg
+
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
 sudo systemctl start haproxy
