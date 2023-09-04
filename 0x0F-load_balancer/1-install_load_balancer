@@ -30,12 +30,14 @@ defaults
 
 frontend http
     bind *:80
+    mode http
     default_backend web_backend
 
 backend web_backend
     balance roundrobin
-    server web-01 242145-web-01:80 check
-    server web-02 242145-web-02:80 check
+    mode http
+    server web-01 35.174.211.53:80 check
+    server web-02 54.209.215.209:80 check
 EOF
 
 
