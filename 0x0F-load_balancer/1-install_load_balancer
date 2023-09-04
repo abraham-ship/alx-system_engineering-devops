@@ -6,6 +6,9 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.8 -y
 
 sudo apt-get install haproxy=2.8.\*
 
+
+echo "ENABLED=1" | sudo tee /etc/default/haproxy
+
 cat <<EOF>>"/etc/haproxy/haproxy.cfg"
 global
     log /dev/log local0
@@ -35,7 +38,6 @@ backend web_backend
     server web-02 242145-web-02:80 check
 EOF
 
-echo "ENABLED=1" | sudo tee /etc/default/haproxy
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
