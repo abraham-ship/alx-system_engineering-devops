@@ -4,15 +4,34 @@
 sudo apt-get install --no-install-recommends software-properties-common -y
 sudo add-apt-repository ppa:vbernat/haproxy-2.0 -y
 
-echo "frontend http
-    bind *:80
-    mode http
-    default_backend web-backend" | sudo tee /etc/haproxy/haproxy.cfg
+cat <<EOF>>"/etc/haproxy/haproxy.cfg"
+global
+    log /dev/log local0
+    log /dev/log local1 notice
+    maxconn 4096
+    user haproxy
+    group haproxy
 
-echo "backend web_backend
+defaults
+    log global
+    mode http
+    option httplog
+    option dontlognull
+    option redispatch
+    retries 3
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+frontend http
+    bind *:80
+    default_backend web_backend
+
+backend web_backend
     balance roundrobin
-    server web-01 242145-web-01:80 check
-    server web-02 242145-web-02:80 check" | sudo tee /etc/haproxy/haproxy.cfg
+    server web-01 [STUDENT_ID]-web-01:80 check
+    server web-02 [STUDENT_ID]-web-02:80 check
+EOF
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 
