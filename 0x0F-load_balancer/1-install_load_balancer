@@ -21,4 +21,4 @@ backend web_backend
 	/etc/haproxy/haproxy.cfg
 
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+sudo service haproxy start
