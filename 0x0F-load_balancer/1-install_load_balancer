@@ -2,8 +2,8 @@
 # install and configure HAproxy on server using roundrobin algorithm
 
 apt-get install --no-install-recommends software-properties-common -y
-add-apt-repository ppa:vbernat/haproxy-2.6 -y
-apt-get install haproxy=2.6.\* -y
+add-apt-repository ppa:vbernat/haproxy-2.0 -y
+apt-get install haproxy=2.0\* -y
 
 
 echo "
