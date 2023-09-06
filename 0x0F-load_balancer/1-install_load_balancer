@@ -15,8 +15,8 @@ frontend server
 backend web_backend
 	mode http
 	balance roundrobin
-	server web-01 35.174.211.53:80 check
-	server web-02 54.209.215.209:80 check" | sudo tee -a
+	server 242145-web-01 35.174.211.53:80 check
+	server 242145-web-02 54.209.215.209:80 check" | sudo tee -a
 	/etc/haproxy/haproxy.cfg
 
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
