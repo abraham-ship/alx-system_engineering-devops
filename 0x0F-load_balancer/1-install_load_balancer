@@ -21,4 +21,4 @@ backend web_backend
 
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-sudo service haproxy start
+sudo service haproxy restart
