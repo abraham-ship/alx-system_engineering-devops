@@ -9,8 +9,8 @@ if __name__ == "__main__":
     from sys import argv
 
     user_id = argv[1]
-    user = requests.get(f"https://jsonplaceholder.typicode.com/users/\
-            {user_id}").json()
+    user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
+                        .format(user_id)).json()
     employee = user.get("username")
     tasks = requests.get(f"https://jsonplaceholder.typicode.com/todos?userId=\
             {user_id}").json()
