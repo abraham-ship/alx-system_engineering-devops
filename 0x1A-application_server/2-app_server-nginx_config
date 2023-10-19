@@ -1,7 +1,6 @@
 # configure Nginx to serve your page from the route /airbnb-onepage/
 server {
     listen 80;
-    listen [::]:80;
     server_name 100.25.182.7;
     add_header X-Served-By $hostname;
 
